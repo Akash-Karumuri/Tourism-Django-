@@ -1,0 +1,502 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waterfall</title>
+    <link rel="stylesheet" href="{% static 'plugin/assets/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'plugin/assets/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-5.3.3-dist/css/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'waterfall.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'assets/logo.jpg' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#collapsibleNavId" data-bs-offset="56">
+    <div class="scroll">
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top p-1">
+            <div class="container top">
+                <a class="navbar-brand">
+                <strong style="font-family: Faster One,system-ui; font-weight: 400;font-style: normal; font-size: 30px;">Ak Tours</strong></a>
+                <button
+                    class="navbar-toggler d-lg-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId"
+                    aria-controls="collapsibleNavId"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span></button>
+                <div  class="collapse navbar-collapse nav-content" id="collapsibleNavId">
+                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#top">Top Waterfalls</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">Waterfall Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#packages" >Tour & Packages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#review" >Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sign">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+            
+    </header>
+    <section class="video-background mx-0 p-0 mb-5" id="home">
+        <video autoplay muted loop id="bgVideo">
+            <source src="media/assets/bg-video.mp4" autoplay loop type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content animate__animated animate__zoomIn">
+            <h2>Discover the Breathtaking <span style="color: gold;"><strong>Waterfalls of India</strong></span>  Your Ultimate Guide to Nature’s Wonders</h2>
+            <p>Experience the beauty of nature with us.</p>
+            <div class="waterfall-animation">
+                <span class="fixed"><strong>Visit</strong></span>
+                <span class="changing"></span>
+              </div>
+        </div>
+    </section>
+    <section data-aos="flip-up" data-aos-duration="1000" data-aos-delay="500" class="container-fluid wonderland p-5" id="about">
+        <h2 class="animate__backInDown">Welcome to India’s Waterfall Wonderland</h2>
+        <p class="px-5">India is a land of diverse landscapes, and its waterfalls are among the most mesmerizing natural wonders you can experience. From the towering cascades in the Western Ghats to the serene, mist-covered falls in the North-East, every waterfall in India holds its own story of beauty, power, and tranquility. Each one is a testament to the incredible natural diversity found across the country, offering visitors a chance to reconnect with nature in its purest form.Prepare to be awestruck by the sheer diversity and splendor of India's waterfalls as you embark on a journey that promises adventure, peace, and memories to last a lifetime. Welcome to a world where nature’s magic flows in endless streams!</p>
+
+        <div class="row p-5">
+            <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="500" class="col-sm-12 col-xl-4 mb-5">
+                <img src="media/assets/wonder1.jpg" alt="">
+            </div>
+            <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="500" class="col-sm-12 col-xl-4 mb-5">
+                <img src="media/assets/wonder2.webp" alt="">
+            </div>
+            <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="500" class="col-sm-12 col-xl-4">
+                <img src="media/assets/wonder3.webp" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="container featured pt-5" id="top">
+        <div class="flexcenter heading m-3"><h2>Top Waterfalls</h2></div>
+        <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" class="row">
+            <div class="col-sm-12 col-xl-4 mb-5">
+                <h4>Jog Falls, Karnataka</h4>
+                <p>Also known by alternative names of Gerusoppe Falls, Gersoppa Falls, and Jogada Gundi, it is one of the highest waterfalls in India. During monsoons, one can see a breathtaking view of the falls with rainbows coming every now and then.</p>
+                <p><b>Best Time To Visit:</b> The Best Time to experience Jog Falls is between August – December.</p>
+                <a href="https://maps.app.goo.gl/SwXUPPzQr2QB3s1m7" target="new"><button>Locate <i class="bi bi-geo-alt-fill"></i></button></a>
+            </div>
+            <div class="col-sm-12 col-xl-8 flexcenter">
+                <img src="media/assets/jogg-falls.jpg" alt="">
+            </div>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" class="row rev pt-5">
+            <div class="col-sm-12 col-xl-8 flexcenter">
+                <img src="media/assets/Dudhsagar-waterfall.jpg" alt="">
+            </div>
+            <div class="col-sm-12 col-xl-4 mb-5">
+                <h4>Dudhsagar Waterfall, Goa</h4>
+                <p>Dudhsagar Falls is a four-tiered waterfall on the Mandovi River in the Indian state of Goa. It is 60 km from Panaji by road and is located on the Belgaum–Vasco Da Gama rail route about 46 km east of Madgaon and 80 km south of Belgaum. Dudhsagar Falls is amongst India's tallest waterfalls with a height of 310 m (1017 feet) and an average width of 30 metres (100 feet).</p>
+                <p><b>Best Time To Visit:</b> October to May</p>
+                <a href="https://maps.app.goo.gl/mMp1f85oc9DgNUVE6"target="new"><button>Locate <i class="bi bi-geo-alt-fill"></i></button></a>
+            </div>
+        </div>
+        <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" class="row pt-5">
+            <div class="col-sm-12 col-xl-4 mb-5">
+                <h4>Athirappilly Falls, Kerala</h4>
+                <p>Athirapilly Falls is situated in vali Athirapilly Panchayat in Chalakudy Taluk of Thrissur District in Kerala, India on the Chalakudy River, which originates from the upper reaches of the Western Ghats at the entrance to the Sholayar ranges. It is the largest waterfall in Kerala, which stands tall at 81.5 feet.</p>
+                <p><b>Best Time To Visit:</b> September to January </p>
+                <a href="https://maps.app.goo.gl/WU66oe6KwpyU4RBs8"target="new"><button>Locate <i class="bi bi-geo-alt-fill"></i></button></a>
+            </div>
+            <div class="col-sm-12 col-xl-8 flexcenter">
+                <img src="media/assets/Athirappilly.jpg" alt="">
+            </div>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" class="row rev pt-5">
+            <div class="col-sm-12 col-xl-8 flexcenter">
+                <img src="media/assets/Nohkalikai.jpg" alt="">
+            </div>
+            <div class="col-sm-12 col-xl-4 mb-5">
+                <h4>Nohkalikai Falls, Meghalaya</h4>
+                <p>Nohkalikai Falls, nestled in the lush green hills of Meghalaya, is a sight to behold. With a staggering height of 1,115 feet, it's India's tallest plunge waterfall. Get ready to be mesmerized by the roar of the falls and the lush surroundings.</p>
+                <p><b>Best Time To Visit:</b> October to April</p>
+                <a href="https://maps.app.goo.gl/5RRMLCTmMCEXBM8m9"target="new"><button>Locate <i class="bi bi-geo-alt-fill"></i></button></a>
+            </div>
+        </div>
+    </section>
+    <section class="container gallery mt-5 p-5" id="gallery">
+        <div class="flexcenter heading m-3 mb-5"><h2>Waterfall Gallery</h2></div>
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img src="media/assets/Athirappilly.jpg" alt="">
+                <div class="fall-name">
+                    <h4>Athirappilly Waterfall,Kerala</h4>
+                </div>
+            </div>
+            <div class="item">
+                <img src="media/assets/Dudhsagar-waterfall.jpg" alt="">
+                <div class="fall-name">
+                    <h4>Dudhsagar Waterfall,Goa</h4>
+                </div>
+            </div>
+            <div class="item">
+                <img src="media/assets/jogg-falls.jpg" alt="">
+                <div class="fall-name">
+                    <h4>Jogg Waterfalls, Karnataka</h4>
+                </div>
+            </div>
+            <div class="item">
+                <img src="media/assets/Nohkalikai.jpg" alt="">
+                <div class="fall-name">
+                    <h4>Nohkalikai Waterfalls, Meghalaya</h4>
+                </div>
+            </div>
+            <div class="item">
+                <img src="media/assets/Meenmutty-Waterfalls.jpg" alt="">
+                <div class="fall-name">
+                    <h4>Meenmutty Waterfalls, Kerala</h4>
+                </div>
+            </div>
+            <div class="item">
+                <img src="media/assets/Shivanasamudra_Falls.jpg" alt="">
+                <div class="fall-name">
+                    <h4>Shivanasamudra Waterfalls, Karnataka</h4>
+                </div>
+            </div>
+            <div class="item">
+                <img src="media/assets/bhagsu-waterfall.jpg" alt="">
+                <div class="fall-name">
+                    <h4>Bhagsu Waterfalls, Himachal Pradesh</h4>
+                </div>
+            </div>
+            <div class="item">
+                <img src="media/assets/Kempty_Falls.jpg" alt="">
+                <div class="fall-name">
+                    <h4>Kempty Waterfalls, Uttarakhand</h4>
+                </div>
+            </div>
+            <div class="item">
+                <img src="media/assets/Hogenakkal_Falls.jpg" alt="">
+                <div class="fall-name">
+                    <h4>Hogenakkal Waterfalls, Tamil Nadu</h4>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="container-fluid tour pt-5" id="packages">
+        <div class="flexcenter heading m-3"><h2>Tour Packages</h2></div>
+        <div class="container"><h4><strong>Customize Your Waterfall Adventure:</strong></h4>
+            <p>India's diverse landscapes are home to some of the world's most breathtaking waterfalls, each offering a unique experience for every type of traveler. Whether you're chasing the thrill of an adventure, seeking the serenity of nature, or yearning for a holistic retreat, our curated waterfall tour packages promise to deliver an unforgettable journey. Explore, customize, and embark on the adventure that resonates with your soul.</p>
+        </div>
+        <div class="container">
+            <div class="heading my-5"><h4>Package 1: Western Ghats Waterfall Tour</h4></div>
+            <p>Venture into the verdant hills of the Western Ghats, a UNESCO World Heritage site, where nature's grandeur is on full display.This tour takes you through the heart of Karnataka and Goa, visiting the region’s most iconic waterfalls such as Jog Falls, thesecond-highest plunge waterfall in India, and Dudhsagar Falls, known for its breathtaking four-tiered cascade. Along the way,you'll trek through lush forests, experience local culture, and marvel at the biodiversity that makes this region so unique.Perfect for nature lovers and trekking enthusiasts, this tour is an exhilarating blend of adventure and natural beauty.</p>
+            <ul>
+                <li><strong>Jog Falls (Karnataka)</strong> - One of the highest plunge waterfalls in India.</li>
+                <li><strong>Dudhsagar Falls (Goa)</strong> - A four-tiered waterfall on the Mandovi River, known for its milky appearance.</li>
+                <li><strong>Abbey Falls (Karnataka)</strong> - A picturesque waterfall located near Madikeri in Coorg.</li>
+                <li><strong>Unchalli Falls (Karnataka)</strong> - Also known as Lushington Falls, this waterfall offers a spectacular sight inthe Western Ghats.</li>
+            </ul>
+            <div class="row flexcenter mt-5" id="pricing">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" class="col-sm-12 col-xl-5 mx-5 p-5">
+                    <h4>Itinerary Highlights:</h4>
+                    <ul>
+                        <li><i class="bi bi-calendar2"></i> <b>Day 1:</b> Arrival in Bangalore and transfer to Shimoga.</li>
+                        <li><i class="bi bi-calendar2"></i> <b>Day 2:</b> Trek to Jog Falls; explore the surrounding viewpoints.</li>
+                        <li><i class="bi bi-calendar2"></i> <b>Day 3:</b> Transfer to Goa; visit Dudhsagar Falls.</li>
+                        <li><i class="bi bi-calendar2"></i> <b>Day 4:</b> Explore Goa’s lesser-known waterfalls.</li>
+                        <li><i class="bi bi-calendar2"></i> <b>Day 5:</b> Departure from Goa.</li>
+                    </ul>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" class="col-sm-12 col-xl-5 p-5">
+                    <h4>Pricing & Inclusions:</h4>
+                    <p><b>Inclusions:</b> Accommodation in 3-star hotels, daily breakfast, guided treks, all transfers.</p>
+                    <p><b>Price:</b> Starting from ₹25,000 per person.</p>
+                    <button class="mt-3 animate__animated animate__heartBeat" data-bs-toggle="modal" data-bs-target="#book-tour">Book Now <i class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="heading my-5"><h4>Package 2: North-East India Waterfall Expedition</h4></div>
+                <p>Immerse yourself in the mystical beauty of North-East India, a land of rolling hills, dense forests, and some of the most stunning waterfalls you’ll ever see. This expedition takes you through the states of Meghalaya and Arunachal Pradesh, home to Nohkalikai Falls, the tallest plunge waterfall in India, and many other hidden gems waiting to be discovered. Experience the charm of local villages, the richness of tribal culture, and the pristine beauty of nature in its most unspoiled form. This package is ideal for adventurous souls and those seeking to explore off-the-beaten-path destinations.</p>
+                <ul>
+                    <li><strong>Nohkalikai Falls (Meghalaya)</strong> - The tallest plunge waterfall in India, located near Cherrapunji.</li>
+                    <li><strong>Seven Sisters Falls (Meghalaya)</strong> - Also known as Nohsngithiang Falls, it is a seven-segmented waterfall near Mawsmai village.</li>
+                    <li><strong>Dainthlen Falls (Meghalaya)</strong> - Located near Cherrapunji, known for its mythological significance.</li>
+                    <li><strong>Bishop & Beadon Falls (Meghalaya)</strong> - Twin waterfalls located near Shillong, providing a stunning view of cascading water.</li>
+                </ul>
+       
+            <div class="row flexcenter mt-5" id="pricing">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" class="col-sm-12 col-xl-5 mx-5 p-5">
+                    <h4>Itinerary Highlights:</h4>
+                    <ul>
+                        <li><i class="bi bi-calendar2"></i> <b>Day 1:</b>Arrival in Guwahati; transfer to Shillong.</li>
+                        <li><i class="bi bi-calendar2"></i> <b>Day 2:</b>Visit Nohkalikai Falls.</li>
+                        <li><i class="bi bi-calendar2"></i> <b>Day 3:</b>Visit Mawlynnong, Asia’s cleanest village.</li>
+                        <li><i class="bi bi-calendar2"></i> <b>Day 4:</b>Explore the waterfalls around Tawang.</li>
+                        <li><i class="bi bi-calendar2"></i> <b>Day 5:</b>Departure from Guwahati.</li>
+                    </ul>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" class="col-sm-12 col-xl-5 p-5">
+                    <h4>Pricing & Inclusions:</h4>
+                    <p><b>Inclusions:</b>Accommodation in boutique hotels and homestays, all meals, local guides, transportation.</p>
+                    <p><b>Price:</b> Starting from ₹35,000 per person.</p>
+                    <button class="mt-3 animate__animated animate__heartBeat" data-bs-toggle="modal" data-bs-target="#book-tour">Book Now <i class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="heading my-5"><h4>Package 3: Kerala Waterfall & Wellness Retreat</h4></div>
+            
+                <p>Discover the tranquil beauty of Kerala, where cascading waterfalls meet the serene backwaters and lush green landscapes. This package combines the natural splendor of Kerala's waterfalls with the rejuvenating experience of a wellness retreat. Visit Athirappilly Falls, often referred to as the 'Niagara of India,' and Vazhachal Falls, set amidst thick forests and plantations. After days of exploration, unwind with yoga sessions, Ayurvedic treatments, and meditation in a peaceful retreat nestled in nature. This tour is perfect for those looking to rejuvenate their mind, body, and spirit in the lap of nature.</p>
+                <ul>
+                    <li><strong>Athirappilly Falls</strong> - Known as the 'Niagara of India,' it is the largest waterfall in Kerala.</li>
+                    <li><strong>Vazhachal Falls</strong> - Located close to Athirappilly, surrounded by lush greenery and forest.</li>
+                    <li><strong>Meenmutty Falls</strong> - A three-tiered waterfall located in Wayanad, known for its scenic beauty.</li>
+                    <li><strong>Soochipara Falls (Sentinel Rock Waterfalls)</strong> - A popular waterfall near Kalpetta in Wayanad district.</li>
+                </ul>
+            <div class="row flexcenter mt-5" id="pricing">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" class="col-sm-12 col-xl-5 mx-5 p-5">
+                    <h4>Itinerary Highlights:</h4>
+                    <ul>
+                        <li><i class="bi bi-calendar2"></i> <b>Day 1:</b>Arrival in Kochi; transfer to Athirappilly.</li>
+                        <li><i class="bi bi-calendar2"></i> <b>Day 2:</b>Visit Athirappilly and Vazhachal Falls; guided nature walk..</li>
+                        <li><i class="bi bi-calendar2"></i> <b>Day 3:</b>Transfer to Munnar; explore local waterfalls.</li>
+                        <li><i class="bi bi-calendar2"></i> <b>Day 4:</b>Full day of wellness activities including yoga, meditation.</li>
+                        <li><i class="bi bi-calendar2"></i> <b>Day 5:</b>Departure from Kochi.</li>
+                    </ul>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" class="col-sm-12 col-xl-5 p-5">
+                    <h4>Pricing & Inclusions:</h4>
+                    <p><b>Inclusions:</b>Luxury resort stays, all meals, daily yoga and wellness sessions, guided tours, and transfers.</p>
+                    <p><b>Price:</b> Starting from ₹45,000 per person.</p>
+                    <button class="mt-5 animate__animated animate__heartBeat" data-bs-toggle="modal" data-bs-target="#book-tour">Book Now <i class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Modal trigger button -->
+    <!-- Modal Body -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+    <div
+        class="modal fade"
+        id="book-tour"
+        tabindex="-1"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        
+        role="dialog"
+        aria-labelledby="modalTitleId"
+        aria-hidden="true"
+    >
+        <div
+            class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md"
+            role="document"
+        >
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">
+                        Fill the Form
+                    </h5>
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                   <form action="{% url 'home' %}" method="POST" target="new" onsubmit="return validate()">{% csrf_token %}
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        <label for="full-name">Full Name <span class="text-danger">*</span></label>
+                        <input type="text" id="full-name" name="full_name" placeholder="Enter your full name"  class="form-control">
+                        <p id="nameError"></p>
+                        <label for="email">Email Address <span class="text-danger">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address"  class="form-control">
+                        <p id="mailError"></p>
+                        <label for="phone">Phone Number <span class="text-danger">*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"  class="form-control">
+                        <p id="mobileError"></p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Select Your Tour Package</legend>
+                        
+                        <label for="tour-package">Tour Package:</label>
+                        <select id="tour-package" name="tour-package" required>
+                          <option value="western-ghats-tour">Western Ghats Waterfall Tour</option>
+                          <option value="north-east-expedition">North-East India Waterfall Expedition</option>
+                          <option value="kerala-wellness-retreat">Kerala Waterfall & Wellness Retreat</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Choose Your Travel Dates</legend>
+                        <label for="start-date">Start Date <span class="text-danger">*</span></label>
+                        <input type="date" id="start-date" name="start-date"  class="form-control">
+                        <p id="startDateError"></p>
+                        <label for="end-date">End Date <span class="text-danger">*</span></label>
+                        <input type="date" id="end-date" name="end-date"  class="form-control">
+                        <p id="endDateError"></p>
+                        <label for="num-travelers">Number of Travelers <span class="text-danger">*</span></label>
+                        <input type="number" id="num-travelers" name="num-travelers"  class="form-control">
+                        <p id="travelerError"></p>
+                    </fieldset>
+                </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                        >
+                            Close
+                        </button>
+                        <input type="submit">
+                    </div>
+                 </form>
+            </div>
+        </div>
+    </div>
+<div data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="500" class="container-fluid  review pt-5 mb-5 mt-5" id="review">
+    <div class="flexcenter heading m-3"><h2>Customer Stories</h2></div>
+    <div class="m-5 px-2">
+        <h3 class="px-5">Discover the Magic Through the Eyes of Our Adventurers</h3>
+        <h5 class="px-5">Step into the world of our past travelers and explore the beauty, serenity, and awe that India's waterfalls have to offer. Each journey is unique, filled with breathtaking views, thrilling hikes, and unforgettable memories. Our travelers share stories of adventure, connection with nature, and the joy of witnessing some of the most magnificent waterfalls in the world.</h5>
+    </div>
+    <div class="owl-carousel owl-theme container">
+        <div class="item"><div class="message">
+            <h4>Traveler: Sunita, Chennai</h4>
+            <p>The North-East India Waterfall Expedition was an adventure of a lifetime. The waterfalls, especially the Seven Sisters Falls, were beyond mesmerizing. The hospitality and warmth of the local people made the experience even more memorable.</p>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> 4.5
+            </div></div>
+        <div class="item"><div class="message"> <h4>Traveler: Rahul & Meera, Pune</h4>
+            <p>Exploring the Western Ghats was a fantastic experience. The Dudhsagar Falls were absolutely breathtaking, and we were lucky enough to catch the perfect view from the train. We’ll definitely be coming back for more!</p>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> 4.5</div></div>
+        <div class="item"><div class="message">
+            <h4>Traveler: Neha & Arjun, Bangalore</h4>
+            <p>The Kerala Waterfall & Wellness Retreat was exactly what we needed. The Falls were absolutely breathtaking and blend of natural beauty, yoga, and Ayurveda left us rejuvenated and at peace. Every moment was pure bliss!
+            </p>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i> 4.0
+            </div></div>
+        <div class="item"><div class="message">
+            <h4>Traveler: Kiran, Hyderabad</h4>
+            <p>I had always heard about the beauty of Kerala, but seeing the Meenmutty Falls in person was something else. The entire trip was well-organized, and the guides were knowledgeable and friendly. An unforgettable experience! I will definitely be coming back for more!"
+            </p>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i> 4.0
+            </div></div>
+        <div class="item"><div class="message">
+            <h4>Traveler: Amit & Priya, Mumbai</h4>
+            <p>Our trip to the waterfalls of Karnataka was a dream. The scenery was stunning, and the arrangements were seamless.The Falls were absolutely breathtaking. We highly recommend this experience! Every moment was pure bliss!</p>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> 4.5
+            </div></div>
+        <div class="item"><div class="message"> <h4>Traveler: Ravi & Neha, Bangalore</h4>
+            <p>Visiting Nohkalikai Falls in Meghalaya was life-changing. The sheer height and the beauty of the place left me speechless. And we were lucky enough to catch the perfect view from the train. We’ll definitely be coming back for more!</p>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> 4.5</div></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="{% static 'plugin/owl.carousel.min.js' %}"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:20,
+    nav:true,
+    autoplay:true,
+    autoplayTimeout:2000,
+    autoplayHoverPause:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:3
+        }
+    }
+})
+    </script>
+
+</div>
+    <div data-aos="flip-right" data-aos-duration="1000" data-aos-delay="500" class="container-fluid py-5" id="sign">
+        <section class="container sign-up">
+            <div class="row">
+                <div class="col-sm-12 col-md-6  p-5">
+                    <h4><strong>Stay Connected with India’s Natural Wonders</strong></h4>
+                    <p><strong>Get exclusive travel deals, tips, and the latest updates on India’s waterfalls delivered straight to your inbox.</strong></p>
+                </div>
+                <div class="col-sm-12 col-md-6 p-5">
+                    <input type="email" placeholder="Enter your Email">
+                    <button type="submit"class="btn btn-primary">Subscribe Now</button>
+                    <p><strong>Sign up and get 10% off your first waterfall tour booking!</strong></p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+<!-- ==============================================================Script Tags=====================================================================-->
+    
+    <script src="{% static 'script.js' %}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    </div>
+<!-- ===========================================================================================================================================-->
+</body>
+<footer class="container-fluid pt-5 px-5">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-xl-4">
+            <h4>Address</h4>
+            <p>AK Tours</p>
+            <p>Godarigunta, Kakinada, Andhra Pradesh</p>
+            <p>533003, India</p>
+            <p><b><i class="bi bi-telephone-fill"></i> Phone:</b> +91 9392968885</p>
+            <p><b><i class="bi bi-envelope-at-fill"></i> Email:</b> aktours888@gmail.com</p>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-4 quick">
+            <h4>Quick Links</h4>
+            <a href="#about">About Us</a> <br>
+            <a href="#top">Top Waterfalls</a> <br>
+            <a href="#packages">Tour & Packages</a><br>
+            <a href="#sign">Contact Us</a><br>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-4 mb-5">
+            <h4>Newsletter Signup</h4>
+            <p>Stay updated with our latest projects, tips, and promotions.</p>
+            <input type="email" placeholder="Enter your Email">
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-6">
+                <p id="rights">© 2024 AK Tours. All Rights Reserved.</p>
+            </div>
+            <div class="col-6 follow">
+                <p id="follow">Follow Us: <i class="bi bi-instagram"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-threads-fill"></i>
+                    <i class="bi bi-twitter-x"></i> </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>
