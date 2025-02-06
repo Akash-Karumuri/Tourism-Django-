@@ -1,0 +1,635 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+::-webkit-scrollbar{
+    display: none;
+} 
+
+body{
+    background-color: #C8DAE9;
+    color: black;
+    margin: 0;
+}
+.navbar-toggler{
+    background-color: #C8DAE9;
+}
+.flexcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rev{
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+nav{
+    background-color: #3c4e6c;
+    color: white;
+    width: 100%;
+}
+.navbar{
+    height: auto;
+    width: 100%;
+    overflow-x: hidden;
+}
+.container.top {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+}
+.navbar-brand{
+    color: white;
+}
+.navbar-brand:hover{
+    color: white;
+}
+.nav-item  a{
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 5px;
+    padding: 2px;
+    margin-top: 5px;
+}
+.nav-item a.active{
+    background-color: #C8DAE9;
+    border-radius: 10px;
+    color:black;
+}
+.nav-item a:hover{
+    background-color: #C8DAE9;
+    border-radius: 10px;
+    color:black;
+    
+}
+nav li{
+    margin-left: 20px;
+    width: auto;
+}
+.nav-content{
+    font-size: large;
+    padding-left: 180px;
+}
+.video-background {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow:hidden;
+}
+.scroll{
+    overflow: hidden;
+}
+#bgVideo {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 60%;
+    padding: 20px;
+    z-index: 1;
+}
+
+.content h2 {
+    font-weight: bolder;
+    font-size: clamp(24px, 5vw, 35px); 
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.content p {
+    font-size: clamp(16px, 3vw, 20px);
+    margin-bottom: 30px;
+}
+
+.waterfall-animation {
+    font-family: Arial, sans-serif;
+    font-size: clamp(24px, 4vw, 40px);
+    display: inline-block;
+}
+
+.fixed {
+    margin-right: 10px;
+    color: #fe2d2d;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.changing {
+    display: inline-block;
+    position: relative;
+    color: gold;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.changing::after {
+    content: 'Jog Falls';
+    animation: changeNames 10s infinite;
+    animation-timing-function: linear;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.wonderland,
+.featured,
+.tour,
+.review,
+.sign-up {
+    overflow: hidden;
+}
+
+@keyframes changeNames {
+    0%   { content: 'Jog Falls'; }
+    10%  { content: 'Nohkalikai Falls'; }
+    20%  { content: 'Athirappilly Falls'; }
+    30%  { content: 'Dudhsagar Falls'; }
+    40%  { content: 'Meenmutty Falls'; }
+    50%  { content: 'Shivanasamudra Falls'; }
+    60%  { content: 'Kunchikal Falls'; }
+    70%  { content: 'Bhimlat Falls'; }
+    80%  { content: 'Hogenakkal Falls'; }
+    90%  { content: 'Iruppu Falls'; }
+    100% { content: 'Jog Falls'; }
+}
+.content p{
+    font-size: 20px;
+}
+.wonderland{
+    text-align: center;
+}
+.wonderland h2{
+    margin-top: 30px;
+    font-weight: bold;
+}
+.wonderland p{
+    font-size: 18px;
+}
+.wonderland img{
+    height: 250px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 5px 5px  15px black;
+}
+.wonderland img:hover{
+    transform: scale(1.2);
+    transition-duration: 1s;
+}
+.featured{
+    text-align: start;
+}
+.featured h4{
+    text-decoration: underline #093A4D;
+    text-underline-offset: 10px;
+    margin-bottom: 20px;
+}
+.featured p{
+    text-align: justify;
+    line-height: 2;
+    font-size: 18px;
+}
+.heading h2{
+    font-weight: bold;
+    color: black;
+    width:auto;
+    padding: 5px 20px 5px 20px;
+    border-radius: 10px;
+    text-align: center;
+ }
+ .heading h4{
+    background-color:#3c4e6c;
+    color: white;
+    width:auto;
+    padding: 5px 20px 5px 20px;
+    border-radius: 10px;
+    text-align: center;
+ }
+.featured img{
+    width: 90%;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #5d5d5d;
+}
+.featured button{
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #3c4e6c;
+    color: white;
+    border: 0;
+}
+.featured button i{
+    margin-left: 5px;
+}
+.featured button:hover{
+    transform: scale(1.2);
+    background-color: black;
+    color: white;
+}
+.gallery .item {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.gallery h2{
+    text-align: center;
+    font-weight: bolder;
+}
+.gallery .item img {
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.fall-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.fall-name h4 {
+    color: gold;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.gallery .item:hover .fall-name {
+    opacity: 1;
+}
+
+.gallery .item:hover img {
+    transform: scale(1.1);
+}
+#pricing div{
+    background-color:#8bb0cf;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    color: black;
+    text-align: center;
+}
+.tour .row h4{
+    text-decoration: underline black;
+    text-underline-offset: 10px; 
+    margin-bottom: 30px; 
+}
+#tour-package{
+    padding: 10px;
+    border-radius: 10px;
+}
+.tour p,li{
+    font-size: 20px;
+    text-align: justify;
+}
+.tour button{
+    background-color: #283143;
+    color: white;
+    width: 120px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+}
+.modal-body{
+    background-color: #C8DAE9;
+    color: black;
+}
+.tour ul{
+    list-style-type: none;
+    text-align: start;
+    padding-left: 0;
+    line-height: 1.5;
+}
+.tour button:hover{
+    transform: scale(1.2);
+    background-color: black;
+    color: white;
+    animation: none;
+}
+.modal input{
+    width: auto;
+}
+.modal label{
+    margin-top: 10px;
+}
+.modal fieldset{
+    margin-bottom: 30px;
+}
+.modal select{
+    width: auto;
+}
+.modal-footer input{
+    background-color: #3c4e6c;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    width: 20%;
+}
+.review .message {
+    background-color: #8bb0cf;
+    color:black;
+    padding: 30px;
+    border-radius: 20px;
+}
+.review .message i{
+    color: gold;
+    margin-right: 5px;
+}
+.sign-up{
+    background-color: #3c4e6c;
+    border-radius: 10px;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+.sign-up input{
+    border-radius: 10px;
+    padding: 5px;
+    border: 0;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+footer{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+footer input{
+    border-radius: 10px;
+    padding: 5px;
+}
+footer h4{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    margin-bottom: 30px;
+}
+footer #rights{
+    text-align: start;
+}
+footer .follow{
+    text-align: end;
+}
+.follow i{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.quick a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 2;
+}
+
+.quick a:hover{
+    color: rgb(0, 89, 255);
+}
+/* /=======================================================Form Validation====================================================================== */
+.modal-body p{
+    color: #ff4646;
+    padding: 0;
+}
+.thank{
+    width: 100%;
+    background-color:#8bb0cf;
+}
+.thank div{
+    color: white;
+    background-color: #3c4e6c;
+    max-width: 50%;
+    padding: 80px;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+.thank p{
+    font-size: 20px;
+}
+/* Navigation adjustments */
+@media (max-width: 1200px) {
+    .navbar {
+        padding: 10px 15px !important;
+    }
+    
+    .nav-content {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .nav-link {
+        color: #000 !important;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+}
+/* Video section responsiveness */
+@media (max-width: 768px) {
+    .video-background {
+        height: 80vh;
+    }
+    .content span {
+        font-size: 24px;
+        padding: 0 5px;
+        text-align: center;
+    }
+    .content p {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+    #bgVideo {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+/* Wonderland section adjustments */
+@media (max-width: 768px) {
+    .wonderland {
+        padding: 20px !important;
+    }
+
+    .wonderland h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .wonderland p {
+        padding: 15px !important;
+        text-align: justify;
+    }
+
+    .wonderland img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+
+/* Featured section responsiveness */
+@media (max-width: 768px) {
+    .featured .row {
+        flex-direction: column-reverse;
+    }
+
+    .featured .row.rev {
+        flex-direction: column;
+    }
+
+    .featured img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .featured h4 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .featured button {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/* Gallery section adjustments */
+@media (max-width: 768px) {
+    .gallery {
+        padding: 20px !important;
+    }
+    .fall-name h4 {
+        font-size: 18px;
+    }
+}
+
+/* Tour packages responsiveness */
+@media (max-width: 768px) {
+    .tour {
+        padding: 20px !important;
+    }
+
+    .tour h4 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .tour ul {
+        padding-left: 20px;
+    }
+
+    #pricing .col-xl-5 {
+        padding: 20px !important;
+    }
+}
+
+/* Review section adjustments */
+@media (max-width: 768px) {
+    .review {
+        padding: 20px !important;
+    }
+
+    .review h3, .review h5 {
+        padding: 15px !important;
+        text-align: center;
+    }
+
+    .message {
+        padding: 15px;
+    }
+}
+
+/* Sign-up section responsiveness */
+@media (max-width: 768px) {
+    .sign-up {
+        text-align: center;
+    }
+
+    .sign-up input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .sign-up button {
+        width: 100%;
+    }
+}
+
+/* Footer responsiveness */
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+    }
+
+    footer .quick {
+        margin: 20px 0;
+    }
+
+    footer input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    footer button {
+        width: 100%;
+    }
+
+    #rights, #follow {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+/* Modal form responsiveness */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 10px;
+    }
+
+    form fieldset {
+        margin-bottom: 20px;
+    }
+
+    form select, form input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+form p{
+    color: red;
+}
+
