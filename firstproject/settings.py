@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)cvg@j5(e70p-1dta!tuu+ltke6pgrren=7bzwrl4q$n6qmsn5
 DEBUG = os.getenv("DEBUG", "False") == "True"
 SECRET_KEY = os.getenv("SECRET_KEY")
 
-ALLOWED_HOSTS = ['localhost','travel.onrender.com']
+ALLOWED_HOSTS = ['localhost','travel.pythonanywhere.com']
 
 
 # Application definition
