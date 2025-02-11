@@ -23,9 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)cvg@j5(e70p-1dta!tuu+ltke6pgrren=7bzwrl4q$n6qmsn5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv("DEBUG", "False") == "True"
+SECRET_KEY = os.getenv("SECRET_KEY")
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost','travel.onrender.com']
 
 
 # Application definition
@@ -40,6 +41,14 @@ INSTALLED_APPS = [
     'demoapp',
     'rest_framework',
 ]
+INSTALLED_APPS += ["corsheaders"]
+
+
+
+CORS_ALLOWED_ORIGINS = [
+    "https://your-frontend-domain.com",
+    "https://your-app-name.onrender.com",
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -50,6 +59,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+MIDDLEWARE.insert(1, "corsheaders.middleware.CorsMiddleware")
+MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
+
 
 ROOT_URLCONF = 'firstproject.urls'
 
@@ -85,16 +97,17 @@ WSGI_APPLICATION = 'firstproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'travel_db',
-        'USER': 'root',
-        'PASSWORD': 'Akash@2003',
-        'HOST': 'localhost',  # Use 'localhost' if the database is on the same server
-        'PORT': '3306',  # Default MySQL port
+        'NAME': os.getenv("DB_NAME"),
+        'USER': os.getenv("DB_USER"),
+        'PASSWORD': os.getenv("DB_PASSWORD"),
+        'HOST': os.getenv("DB_HOST"),
+        'PORT': os.getenv("DB_PORT", "3306"),
         'OPTIONS': {
-            'charset': 'utf8mb4',  # Supports Unicode
+            'charset': 'utf8mb4',
         },
     }
 }
+
 
 
 
@@ -132,14 +145,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static") #static folder
-]
-STATIC_ROOT = os.path.join(BASE_DIR,'assets') #assets folder
+STATIC_URL = "/static/"
+MEDIA_URL = "/media/"
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
