@@ -9,7 +9,7 @@
 } 
 
 body{
-    background-color: #C8DAE9;
+    background-color:#C8DAE9;
     color: black;
     margin: 0;
 }
@@ -82,6 +82,7 @@ nav li{
 .scroll{
     overflow: hidden;
 }
+
 #bgVideo {
     position: absolute;
     min-width: 100%;
@@ -91,7 +92,7 @@ nav li{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    object-fit: cover;
+    object-fit:cover;
     z-index: -1;
 }
 .content {
