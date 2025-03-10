@@ -206,7 +206,7 @@
         <div class="container"><h4><strong>Customize Your Waterfall Adventure:</strong></h4>
             <p>India's diverse landscapes are home to some of the world's most breathtaking waterfalls, each offering a unique experience for every type of traveler. Whether you're chasing the thrill of an adventure, seeking the serenity of nature, or yearning for a holistic retreat, our curated waterfall tour packages promise to deliver an unforgettable journey. Explore, customize, and embark on the adventure that resonates with your soul.</p>
         </div>
-        <div class="container">
+        <div class="container" id="package1">
             <div class="heading my-5"><h4>Package 1: Western Ghats Waterfall Tour</h4></div>
             <p>Venture into the verdant hills of the Western Ghats, a UNESCO World Heritage site, where nature's grandeur is on full display.This tour takes you through the heart of Karnataka and Goa, visiting the region’s most iconic waterfalls such as Jog Falls, thesecond-highest plunge waterfall in India, and Dudhsagar Falls, known for its breathtaking four-tiered cascade. Along the way,you'll trek through lush forests, experience local culture, and marvel at the biodiversity that makes this region so unique.Perfect for nature lovers and trekking enthusiasts, this tour is an exhilarating blend of adventure and natural beauty.</p>
             <ul>
@@ -234,7 +234,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container" id="package2">
             <div class="heading my-5"><h4>Package 2: North-East India Waterfall Expedition</h4></div>
                 <p>Immerse yourself in the mystical beauty of North-East India, a land of rolling hills, dense forests, and some of the most stunning waterfalls you’ll ever see. This expedition takes you through the states of Meghalaya and Arunachal Pradesh, home to Nohkalikai Falls, the tallest plunge waterfall in India, and many other hidden gems waiting to be discovered. Experience the charm of local villages, the richness of tribal culture, and the pristine beauty of nature in its most unspoiled form. This package is ideal for adventurous souls and those seeking to explore off-the-beaten-path destinations.</p>
                 <ul>
@@ -263,7 +263,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container" id="package3">
             <div class="heading my-5"><h4>Package 3: Kerala Waterfall & Wellness Retreat</h4></div>
             
                 <p>Discover the tranquil beauty of Kerala, where cascading waterfalls meet the serene backwaters and lush green landscapes. This package combines the natural splendor of Kerala's waterfalls with the rejuvenating experience of a wellness retreat. Visit Athirappilly Falls, often referred to as the 'Niagara of India,' and Vazhachal Falls, set amidst thick forests and plantations. After days of exploration, unwind with yoga sessions, Ayurvedic treatments, and meditation in a peaceful retreat nestled in nature. This tour is perfect for those looking to rejuvenate their mind, body, and spirit in the lap of nature.</p>
@@ -435,25 +435,33 @@
     </script>
 
 </div>
-    <div data-aos="flip-right" data-aos-duration="1000" data-aos-delay="500" class="container-fluid py-5" id="sign">
-        <section class="container sign-up">
-            <div class="row">
-                <div class="col-sm-12 col-md-6  p-5">
-                    <h4><strong>Stay Connected with India’s Natural Wonders</strong></h4>
-                    <p><strong>Get exclusive travel deals, tips, and the latest updates on India’s waterfalls delivered straight to your inbox.</strong></p>
-                </div>
-                <div class="col-sm-12 col-md-6 p-5">
-                    <input type="email" placeholder="Enter your Email">
-                    <button type="submit"class="btn btn-primary">Subscribe Now</button>
-                    <p><strong>Sign up and get 10% off your first waterfall tour booking!</strong></p>
-                </div>
-            </div>
-        </section>
+
+<div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="500" class="container contact-form my-5 py-5" id="sign">
+    <div class="text-center">
+        <h2>CONTACT US</h2>
+        <p>Please fill this form in a decent manner</p>
     </div>
+    
+    <form id="contactForm" method="POST" action="{% url 'contact' %}" class="d-flex flex-column w-50 p-5 mb-5 mx-auto shadow">
+        {% csrf_token %}
+        <label for="full_name">Name</label>
+        <input type="text" id="full_name" name="full_name" placeholder="Enter your name" class="form-control" required><br>
+
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" class="form-control" required><br>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message" class="form-control" required></textarea> <br>
+
+        <button type="submit" class="btn btn-primary">SUBMIT</button>
+    </form>
+</div>
+
+
     
 <!-- ==============================================================Script Tags=====================================================================-->
     
-    <script src="{% static 'script.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
@@ -478,11 +486,12 @@
             <a href="#packages">Tour & Packages</a><br>
             <a href="#sign">Contact Us</a><br>
         </div>
-        <div class="col-sm-12 col-md-6 col-xl-4 mb-5">
-            <h4>Newsletter Signup</h4>
-            <p>Stay updated with our latest projects, tips, and promotions.</p>
-            <input type="email" placeholder="Enter your Email">
-            <button type="submit" class="btn btn-primary">Subscribe</button>
+        <div class="col-sm-12 col-md-6 col-xl-4 mb-5 quick">
+            <h4>Explore</h4>
+            <a href="#package1">Western Ghats Waterfalls</a> <br>
+            <a href="#package2">North-East India Waterfalls</a><br>
+            <a href="#package3">Kerala Waterfalls</a><br>
+            
         </div>
         <hr>
         <div class="row">

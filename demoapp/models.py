@@ -38,3 +38,14 @@ class TourBooking(models.Model):
 
     def __str__(self):
         return f"{self.full_name} - {self.tour_package}"
+
+
+class ContactMessage(models.Model):
+    full_name = models.CharField(max_length=100, verbose_name="Full Name")
+    email = models.EmailField(verbose_name="Email Address")
+    message = models.TextField(verbose_name="Message")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Message from {self.full_name} - {self.email}"
+
