@@ -14,8 +14,6 @@ def home(request):
         start_date = request.POST.get('start-date', '').strip()
         end_date = request.POST.get('end-date', '').strip()
         num_travelers = request.POST.get('num-travelers', '').strip()
-
-
         # Save to database
         tour_booking = TourBooking(
             full_name=full_name,
@@ -27,10 +25,10 @@ def home(request):
             num_travelers=num_travelers,
         )
         tour_booking.save()
-        return redirect('ThankYou.html')
+        messages.success(request, "Your booking has been submitted successfully!")
+        return redirect('/#packages')
+
     return render(request, 'base.html')
-def thank_you(request):
-    return render(request, 'ThankYou.html')
 
 
 

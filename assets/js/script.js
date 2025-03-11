@@ -1,3 +1,25 @@
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Script.js loaded!"); // Debugging
+
+    const navLinks = document.querySelectorAll(".nav-link");
+    const navbarToggler = document.querySelector(".navbar-toggler");
+    const navbarCollapse = document.getElementById("collapsibleNavId");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            console.log("Nav link clicked!"); // Debugging
+            if (navbarCollapse.classList.contains("show")) {
+                navbarToggler.click();
+            }
+        });
+    });
+});
+
+
+
+
+// Validation form 
+
 function validate(){
     const username = document.getElementById("full-name").value;
     const nameError = document.getElementById("nameError");

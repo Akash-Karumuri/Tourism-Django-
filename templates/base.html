@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="{% static 'plugin/assets/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'plugin/assets/owl.theme.default.min.css' %}">
     <link rel="stylesheet" href="{% static 'bootstrap-5.3.3-dist/css/bootstrap.min.css' %}">
-    <script src="{% static 'bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'css/waterfall.css' %}">
+    <link rel="stylesheet" href="static/cssfile/waterfall.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet">
@@ -203,6 +202,14 @@
     </section>
     <section class="container-fluid tour pt-5" id="packages">
         <div class="flexcenter heading m-3"><h2>Tour Packages</h2></div>
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <div class="text-center">{{ message }}</div>
+            
+        </div>
+        {% endfor %}
+        {% endif %}
         <div class="container"><h4><strong>Customize Your Waterfall Adventure:</strong></h4>
             <p>India's diverse landscapes are home to some of the world's most breathtaking waterfalls, each offering a unique experience for every type of traveler. Whether you're chasing the thrill of an adventure, seeking the serenity of nature, or yearning for a holistic retreat, our curated waterfall tour packages promise to deliver an unforgettable journey. Explore, customize, and embark on the adventure that resonates with your soul.</p>
         </div>
@@ -324,7 +331,7 @@
                     ></button>
                 </div>
                 <div class="modal-body">
-                   <form action="{% url 'home' %}" method="POST" target="new" onsubmit="return validate()">{% csrf_token %}
+                   <form action="{% url 'home' %}" method="POST" onsubmit="return validate()">{% csrf_token %}
                     <fieldset>
                         <legend>Personal Information</legend>
                         <label for="full-name">Full Name <span class="text-danger">*</span></label>
@@ -457,11 +464,26 @@
     </form>
 </div>
 
-
+<div id="thankYouModal" class="modal fade" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="thankYouModalLabel">Thank You!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                "Thank you for reaching out to us! Your message has been successfully submitted, and we truly appreciate your interest. Our team is reviewing your inquiry, and we will get back to you as soon as possible. In the meantime, feel free to explore our website for more information about our services. We look forward to assisting you!"
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
     
 <!-- ==============================================================Script Tags=====================================================================-->
-    
-    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'jsfile/script.js' %}"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
