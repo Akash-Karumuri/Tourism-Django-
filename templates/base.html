@@ -483,6 +483,15 @@
     
 <!-- ==============================================================Script Tags=====================================================================-->
     <script src="{% static 'bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js' %}"></script>
+    {% if messages %}
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let thankYouModal = new bootstrap.Modal(document.getElementById("thankYouModal"));
+            thankYouModal.show();
+        });
+    </script>
+{% endif %}
+
     <script src="{% static 'jsfile/script.js' %}"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

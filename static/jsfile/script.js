@@ -137,12 +137,10 @@ function validate(){
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
 
-    form.addEventListener("submit", function (event) {
-        event.preventDefault(); 
+    form.addEventListener("submit", function () {
         setTimeout(function () {
             let thankYouModal = new bootstrap.Modal(document.getElementById("thankYouModal"));
             thankYouModal.show();
-            form.reset();
         }, 500);
     });
 });
